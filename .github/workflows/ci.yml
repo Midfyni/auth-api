@@ -18,8 +18,8 @@ jobs:
       postgres:
         image: postgres
         env:
-         POSTGRES_USER: ${{ secret.PGUSER }}
-         POSTGRES_PASSWORD: ${{ secret.PGPASSWORD }}
+         POSTGRES_USER: ${{ secrets.PGUSER }}
+         POSTGRES_PASSWORD: ${{ secrets.PGPASSWORD }}
          POSTGRES_DB: forumapi_test
          
         options: >-
@@ -47,8 +47,8 @@ jobs:
         PORT: 3000
         PGHOST: localhost
         PGPORT: 5432
-        PGUSER: ${{ secret.PGUSER }}
-        PGPASSWORD: ${{ secret.PGPASSWORD }}
+        PGUSER: ${{ secrets.PGUSER }}
+        PGPASSWORD: ${{ secrets.PGPASSWORD }}
         PGDATABASE: forumapi_test
         ACCESS_TOKEN_KEY: secret
         REFRESH_TOKEN_KEY: terces
